@@ -1,0 +1,6 @@
+package strings
+
+
+type is struct {
+	many []string
+}
