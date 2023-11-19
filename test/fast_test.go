@@ -18,8 +18,8 @@ func Test_Map(t *testing.T) {
 		str.Empty(),
 	)
 	var r rule.Rule[Student] = rule.Map[Student, string](
-		nameRule,
 		func(s Student) string {return s.Fname},
+		nameRule,
 	)
 	if ok := r.Evaluate(Student{}); !ok {
 		t.Error("First name cannot be empty")

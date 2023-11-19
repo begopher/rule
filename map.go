@@ -1,6 +1,6 @@
 package rule
 
-func Map[F, T any](rule Rule[T], mapping func(F) T) Rule[F] {
+func Map[F, T any](mapping func(F) T, rule Rule[T]) Rule[F] {
 	if rule == nil {
 		panic("str.Map: rule cannot be nil")
 	}
